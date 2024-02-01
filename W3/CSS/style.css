@@ -1,9 +1,16 @@
 /*This is how you do a comment in css, its easy to learn*/
 /*This is setting all the h1 emements to be the color blue and have wavy fancy text.*/
+
+@font-face {
+    font-family: 'days_laterregular';
+    src: url('28_days_later-webfont.woff2') format('woff2'),
+}
+
+
 h1{
     color:blue; 
     text-decoration: wavy;
-    font-family: 'Bungee Spice', sans-serif;
+    font-family: days_laterregular;
     font-size: 40px;
 }
 /*This is for the container we made where it changes the artical to be in the middle */
@@ -11,12 +18,18 @@ h1{
     width: 1000px;
     height: 800px;
     border: 2px solid red;
-    background-color: darkgrey;
+    background-color: rgb(180, 180, 180);
 }
 body,html{
     display: flex;
     justify-content: center;
     background-color: gray;
+    background-image: linear-gradient(blue, green);
+    /*background-image: url(../Images/RedbullLogo.png);*/
+    background-repeat: no-repeat;
+    background-size:100%; 1050;
+    
+    
 
 }
 #nav{
@@ -42,6 +55,7 @@ body,html{
     border: 1px solid rgb(255, 0, 0);
     text-align: center;
     background-color: rgb(161, 161, 161);
+    font-family: days_laterregular;
 }
 /*This is part of the text for the paragraph, its based on a class and its on the .*/
 .Section-text{
@@ -65,4 +79,32 @@ img{
 }
 #contact-form{
     margin:auto
+}
+.videos{
+    margin: 30 500 150 300;
+}
+/*need to be this to have the link work */
+
+a:link{
+    color: black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+
+}
+
+a:visited{
+    color: black;
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+
+color: blue;
+
 }
