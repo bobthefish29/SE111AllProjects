@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 | javaScript lab</title>
+</head>
+<body>
+    <h1>Week 6 | javaScript Lab</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad illum harum sapiente doloribus quia odit laboriosam fugiat inventore dolore. Dolorem quae unde pariatur facere possimus necessitatibus, provident placeat aliquam?</p>
+    <button>Call Function</button>
+
+    <button id = "testing" >Call Function</button>
+
+
+    <!--You need the script to have the java in HTML-->
+    <Script>
+        var firstName = "david";
+        var lastName = "punchak";
+        var message = `hello ${firstName} ${lastName}`;
+        var para = ""
+
+        //This is the alert command
+        //alert(firstName + " " + lastName);
+        console.log(` ${firstName} ${lastName} `);
+        //This is going to display on the webpage
+        //document.querySelector("h1").innerHTML = message;
+        function outPutToPage(tag, msg, color){
+            document.querySelector(tag).innerHTML = msg;
+            document.querySelector(tag).style.color = color;
+        }
+        //This is calling the function
+        outPutToPage("h1", message, "Blue");
+        outPutToPage("p", lastName, "green");
+
+        //user click button do this function
+        //example of event call
+
+        var testingbutton = document.getElementById('testing');
+        testingbutton.addEventListener('click', testingFunction);
+
+
+        function testingFunction(){
+            alert("It worked")
+        }
+
+
+        var dataPromtbutton = document.querySelector("button");
+        dataPromtbutton.addEventListener('click', dataPrompt);
+        function dataPrompt(){
+            //alerting the user and the prompt is for the input of th euser
+            alert(`My Name is ${firstName} welcome to my program`);
+            var yourName = prompt("Pleas tell me your name");
+            //alert(`hello ${yourName}, Nice to meet you`);
+            var yourLastname = prompt("Pleas enter your last name");
+            alert(`Hello ${yourName} ${yourLastname}, Welcome to my project`);
+
+            //This is for the numbers
+            var firstNum = prompt("Please enter a fist number");
+            var num2 = prompt("Please enter another number");
+            var result = Number(firstNum) * Number(num2);
+
+            alert(`Here is the total; ${result}`);
+
+            var documentBody = document.querySelector("body");
+
+            var outPutData = document.createElement("p");
+
+            outPutData.innerHTML = `your name is ${yourName} ${yourLastname} <br> The total of your number is ${result}. <br> Have a good day user from ${firstName} ${lastName}`;
+
+
+            documentBody.appendChild(outPutData);
+        }
+        
+        //var firstNum = prompt("Please enter a fist number");
+        //var num2 = prompt("Please enter another number");
+        //var result = Number(firstNum) * Number(num2);
+
+        //alert(`Here is the total; ${result}`)
+
+        //dataPromptButton.addEventListner('click', dataPrompt)
+
+
+    </Script>
+
+
+
+</body>
+</html>
