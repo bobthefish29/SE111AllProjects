@@ -27,7 +27,7 @@ body,html{
     background-image: linear-gradient(blue, green);
     /*background-image: url(../Images/RedbullLogo.png);*/
     background-repeat: no-repeat;
-    background-size:100%; 1050;
+    background-size:100%;
     
     
 
@@ -107,4 +107,27 @@ a:active{
 
 color: blue;
 
+}
+
+table{
+    border:1px solid black;
+    margin-left: 150px;
+    width:600px;
+    height: 350px;
+    border-collapse: collapse;
+}
+
+td{
+    border:1px solid black;
+}
+/*This is how we get ever other color for the lines*/
+/*tr:nth-child(even){
+    background-color: #9c2c1c;
+}
+tr:nth-child(odd){
+    background-color: #d1d1d1;
+}*/
+
+.table-data tr:nth-child(odd){
+    background-color: #d1d1d1;
 }
