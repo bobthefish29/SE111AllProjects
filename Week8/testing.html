@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Testing</p>
+
+    
+    <script>
+        //this is rock, paper, scissors
+        var p = Number(prompt(`What Number do you pick: \n0: Rock\n1:Paper\n2:Scissors?`))
+        var c = Math.floor(Math.random()*2.9)
+        var choices = [`Rock`, `Paper`, `Scissors`]
+
+        var outcomes = [
+        [`ties`, `loses`, `wins`],
+        [`wins`, `ties`, `loses`],
+        [`loses`,`wins`,`ties`],
+    ]
+
+    alert (`Player Picked: ${choices[p]} and Computer Picked: ${choices[c]}`)
+    alert (`Player ${outcomes[p][c]}`)
+
+
+    //this is to get the p than have the state change
+
+        var currentState = true
+
+        var p = document.querySelector(`p`)
+
+        p.addEventListener(`click`, function(e){
+        if(currentState===true)
+        {
+            console.log(`Hi`)
+            currentState=false
+        }
+        else
+        {
+            console.log(`Bye`)
+            currentState=true
+        }
+        })
+
+        //give the value of "a"
+        var name = `Jay`
+        console.log(name[1])
+
+
+
+
+    </script>
+
+
+</body>
+</html>
